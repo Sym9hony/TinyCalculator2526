@@ -1,8 +1,8 @@
 ﻿Console.WriteLine("=== Tiny Calculator ===");
 
 Console.ForegroundColor = ConsoleColor.Cyan;
-int a = TryParse1("Operand 1: ");
-int b = TryParse2("Operand 2: ");
+int a = ReadOperand("Operand 1: ");
+int b = ReadOperand("Operand 2: ");
 Console.ResetColor();
 
 Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -22,26 +22,17 @@ else
 }
 Console.ResetColor();
 
-int TryParse1(string input)
+static int ReadOperand(string title)
 {
-    Console.Write("Operand 1: ");
-    int a;
-    while (!int.TryParse(Console.ReadLine(), out a))
+    Console.Write($"{title}: ");
+    int operand;
+    while (!int.TryParse(Console.ReadLine(), out operand))
     {
-        Console.WriteLine("Invalid input. Please enter an integer.");
-        Console.Write("Operand 1: ");
+        Console.WriteLine($"FEHLER: {title} ist keine Zahl");
+        Console.Write($"{title}: ");
     }
-    return a;
+
+    return operand;
 }
-int TryParse2(string input)
-{
-    Console.Write("Operand 2: ");
-    int b;
-    while (!int.TryParse(Console.ReadLine(), out b))
-    {
-        Console.WriteLine("Invalid input. Please enter an integer.");
-        Console.Write("Operand 2: ");
-    }
-    return b;
-}
+
 
