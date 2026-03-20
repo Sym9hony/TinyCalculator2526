@@ -7,6 +7,7 @@ Console.Write("Operand 2: ");
 int b = int.Parse(Console.ReadLine() ?? "0");
 Console.ResetColor();
 
+Console.OutputEncoding = System.Text.Encoding.UTF8;
 Console.ForegroundColor = ConsoleColor.DarkYellow;
 Console.WriteLine($"{a} + {b} = {a + b}");
 Console.ForegroundColor = ConsoleColor.Green;
@@ -14,14 +15,15 @@ Console.WriteLine($"{a} - {b} = {a - b}");
 Console.ForegroundColor = ConsoleColor.DarkYellow;
 Console.WriteLine($"{a} * {b} = {a * b}");
 Console.ForegroundColor = ConsoleColor.Green;
-if (b == 0)
-{ 
-    Console.WriteLine($"{a} / {b} = undefied");
-}
-else
-{
-    Console.WriteLine($"{a} / {b} = {(double)a / b}");
-}
+Console.WriteLine($"{a} / {b} = {(double)a / b}");
+//if (b == 0)
+//{ 
+//    Console.WriteLine($"{a} / {b} = undefied");
+//}
+//else
+//{
+//    Console.WriteLine($"{a} / {b} = {(double)a / b}");
+//}
 Console.ResetColor();
 
 
