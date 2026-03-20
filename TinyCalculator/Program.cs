@@ -20,7 +20,7 @@ if (b == 0)
 }
 else
 {
-    Console.WriteLine($"{a} / {b} = {a / b}");
+    Console.WriteLine($"{a} / {b} = {(double)a / b}");
 }
 Console.ResetColor();
 
