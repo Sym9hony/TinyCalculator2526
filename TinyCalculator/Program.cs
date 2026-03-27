@@ -19,6 +19,8 @@ Console.WriteLine($"{a}^{b} = {(double)Math.Pow(a,b)}");
 Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine($"{a}: {Faculty(a)}");
 Console.WriteLine($"{b}: {Faculty(b)}");
+Console.ForegroundColor = ConsoleColor.DarkYellow;
+Console.WriteLine($"{a} % {b} = {a % b}");
 
 Console.ResetColor();
 
