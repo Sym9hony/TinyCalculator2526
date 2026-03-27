@@ -14,6 +14,8 @@ Console.ForegroundColor = ConsoleColor.DarkYellow;
 Console.WriteLine($"{a} * {b} = {a * b}");
 Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine($"{a} / {b} = {(double)a / b}");
+Console.ForegroundColor = ConsoleColor.DarkYellow;
+Console.WriteLine($"{a}^{b} = {(double)Math.Pow(a,b)}");
 
 Console.ResetColor();
 
