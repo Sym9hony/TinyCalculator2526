@@ -16,6 +16,9 @@ Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine($"{a} / {b} = {(double)a / b}");
 Console.ForegroundColor = ConsoleColor.DarkYellow;
 Console.WriteLine($"{a}^{b} = {(double)Math.Pow(a,b)}");
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine($"{a}: {Faculty(a)}");
+Console.WriteLine($"{b}: {Faculty(b)}");
 
 Console.ResetColor();
 
@@ -31,5 +34,13 @@ static int ReadOperand(string title)
 
     return operand;
 }
-
+int Faculty(int n)
+{
+    int faculty = 1;
+    for (int i = 1; i <= a; i++)
+    {
+        faculty *= i;
+    }
+    return faculty;
+}
 
